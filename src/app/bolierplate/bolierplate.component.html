@@ -1,0 +1,21 @@
+<h1>Boilerplate solution</h1>
+
+<mat-divider></mat-divider>
+<h3 style="margin-top: 20px">Implementation</h3>
+<p>1. Declare of all the subscription we need</p>
+<p>2. Use the <i>subscribe()</i> method in order to notify the observable</p>
+<p>3. Use the <i>unsubscribe()</i> method in order to complete the observable</p>
+
+<mat-divider></mat-divider>
+
+<h3 style="margin-top: 20px">Advantages/Disadvantages</h3>
+<p>- If we do not <i>unsubscribe</i> the observable execution is going to be infinite </p>
+<p>- We need to remember to implements the <i>ngOnDestroy</i> lifecycle hook</p>
+<p>- Memory leak in JS runtime</p>
+
+
+<mat-divider></mat-divider>
+<div style="margin-top: 20px">Subscription from boilerplate value: {{ counter }}</div>
+<button mat-raised-button color="primary" (click)="destroy()" style="margin-top: 20px">
+  <span>Destroy</span>
+</button>

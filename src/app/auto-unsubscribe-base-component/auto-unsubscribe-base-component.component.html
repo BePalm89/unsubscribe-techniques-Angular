@@ -1,0 +1,21 @@
+<h1>Auto-Unsubscribe Base component</h1>
+<mat-divider></mat-divider>
+<h3 style="margin-top: 20px">Implementation</h3>
+<p>1. Create a class called <i>AutoUnsubscribeComponent</i> in the share module</p>
+<p>2. In the component where we want to unsubscribe <i>extends</i> the <i>AutoUnsubscribeComponent</i></p>
+<p>3. Called the method <i>addSubscriptions()</i></p>
+<p>4. We must se the <i>super.ngOnDestroy</i></p>
+
+<mat-divider> </mat-divider>
+
+<h3 style="margin-top: 20px">Advantages/Disadvantages</h3>
+<p>+ It is DIY pure Angular + RxJS approach</p>
+<p>- Using inheritance ( TS is a single-inheritance language )</p>
+<p>- Need of implementing <i>ngOnDestroy</i></p>
+
+<mat-divider></mat-divider>
+<div style="margin-top: 20px">sub from auto subscribe base component {{ counter }}</div>
+<button mat-raised-button color="primary" style="margin-top: 20px">
+  <!--<button mat-raised-button color="primary" (click)="destroy()" style="margin-top: 20px">-->
+  <span>Destroy</span>
+</button>

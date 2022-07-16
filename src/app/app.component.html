@@ -1,0 +1,43 @@
+<mat-toolbar  class="mat-elevation-z8" color="primary">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <span class="center-text" routerLink="/">   Unsubscribe techniques</span>
+
+</mat-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <button mat-button class="menu-button" routerLink="/boilerplate">
+      <span>Boilerplate</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/auto-unsubscribe-base-component">
+
+      <span>Base component</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/until-destroy-decorator">
+
+      <span>@UntilDestroy decorator</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/operators">
+
+      <span>Operator</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/custom-decorator">
+
+      <span>@Custom decorator</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
